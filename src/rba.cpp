@@ -9,7 +9,7 @@ namespace dump
 	static constexpr auto S_RBA = "RBA:";
 	static constexpr auto S_LEN = "LEN:";
 	//
-	void rba::parse(const std::string& s)
+	void rbal::parse(const std::string& s)
 	{
 		std::istringstream ss(s);
 		std::string t;
@@ -29,22 +29,22 @@ namespace dump
 		}
 	}
 
-	unsigned int rba::sno() const
+	unsigned int rbal::sno() const
 	{
 		return _sno;
 	}
 
-	unsigned int rba::bno() const
+	unsigned int rbal::bno() const
 	{
 		return _bno;
 	}
 
-	unsigned short rba::off() const
+	unsigned short rbal::off() const
 	{
 		return _off;
 	}
 
-	unsigned short rba::len() const
+	unsigned short rbal::len() const
 	{
 		return _len;
 	}

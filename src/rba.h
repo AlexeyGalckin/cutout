@@ -4,7 +4,7 @@
 //
 namespace dump
 {
-	class rba
+	class rbal
 	{
 	public:
 		void parse(const std::string& s);
