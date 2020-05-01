@@ -9,6 +9,11 @@ namespace dump
 	static constexpr auto S_RBA = "RBA:";
 	static constexpr auto S_LEN = "LEN:";
 	//
+	rbal::rbal(const std::string& s)
+	{
+		this->parse(s);
+	}
+	//
 	void rbal::parse(const std::string& s)
 	{
 		std::istringstream ss(s);

@@ -7,6 +7,9 @@ namespace dump
 	class rbal
 	{
 	public:
+		rbal() = default;
+		rbal(const std::string& s);
+		//
 		void parse(const std::string& s);
 		//
 		unsigned int sno() const;
