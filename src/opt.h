@@ -1,8 +1,8 @@
 #pragma once
 //
-namespace dump
+namespace cut
 {
-	class options
+	class opt
 	{
 	public:
 	};

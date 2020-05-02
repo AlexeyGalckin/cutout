@@ -1,12 +1,12 @@
-#include "dumper.h"
+#include "out.h"
 //
 #include <fstream>
 #include <iterator>
 #include <cstddef>
 //
-namespace dump
+namespace cut
 {
-	void dumper::operator()(const options& opt)
+	void out::operator()(const opt& o)
 	{
 		//std::ifstream is;
 		////

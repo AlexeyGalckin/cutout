@@ -1,8 +1,8 @@
 #pragma once
 //
-namespace dump
+namespace cut
 {
-	class source
+	class src
 	{
 	public:
 		virtual ~source() = default;

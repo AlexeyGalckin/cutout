@@ -1,8 +1,8 @@
 #pragma once
 //
-namespace dump
+namespace cut
 {
-	class application
+	class app
 	{
 	public:
 		int run(int argc, char** argv);

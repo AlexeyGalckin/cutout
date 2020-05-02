@@ -4,7 +4,7 @@
 #include <string_view>
 #include <iomanip>
 //
-namespace dump
+namespace cut
 {
 	static constexpr auto S_RBA = "RBA:";
 	static constexpr auto S_LEN = "LEN:";

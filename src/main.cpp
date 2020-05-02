@@ -1,7 +1,7 @@
-#include "application.h"
+#include "app.h"
 //
 int main(int argc, char** argv)
 {
-	dump::application app;
-	return app.run(argc, argv);
+	cut::app a;
+	return a.run(argc, argv);
 }

@@ -1,11 +1,11 @@
-#include "application.h"
+#include "app.h"
 //
 //#include "rba.h"
 //#include "processor_dump.h"
 //
-namespace dump
+namespace cut
 {
-	int application::run(int argc, char** argv)
+	int app::run(int argc, char** argv)
 	{
 		//rba r;
 		////
