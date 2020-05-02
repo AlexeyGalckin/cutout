@@ -53,4 +53,17 @@ namespace cut
 	{
 		return _len;
 	}
+	//
+	std::string rba::strrba() const
+	{
+		std::ostringstream ss;
+		//
+		ss << std::hex;
+		ss << "0x";
+		ss << std::setw(sizeof(_sno) << 1) << _sno << ".";
+		ss << std::setw(sizeof(_bno) << 1) << _bno << ".";
+		ss << std::setw(sizeof(_off) << 1) << _off;
+		//
+		return ss.str();
+	}
 }

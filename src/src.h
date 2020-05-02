@@ -7,6 +7,7 @@ namespace cut
 	class src
 	{
 	public:
+		//
 		virtual void seek(size_t b) = 0;
 		//
 		virtual operator bool() const = 0;

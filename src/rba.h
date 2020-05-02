@@ -18,6 +18,7 @@ namespace cut
 		unsigned short off() const;
 		unsigned short len() const;
 		//
+		std::string strrba() const;
 	private:
 		unsigned int   _sno = {};
 		unsigned int   _bno = {};

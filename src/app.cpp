@@ -5,6 +5,8 @@
 //
 #include <iostream>
 //
+#include <fstream>
+//
 namespace cut
 {
 	int app::run(int argc, char** argv)

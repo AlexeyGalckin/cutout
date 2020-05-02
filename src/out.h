@@ -3,6 +3,7 @@
 #include "prc.h"
 //
 #include <memory>
+#include <string_view>
 //
 namespace cut
 {
@@ -17,7 +18,7 @@ namespace cut
 		virtual void operator()(const opt& o) override;
 		//
 	protected:
-		void dump(const buf& b);
+		void dump(const buf& b, const std::string_view f);
 		//
 		std::unique_ptr<src> _s;
 	};
