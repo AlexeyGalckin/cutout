@@ -1,22 +1,29 @@
 #include "app.h"
 //
 #include "arg.h"
+#include "prc.h"
+//
+#include <iostream>
 //
 namespace cut
 {
 	int app::run(int argc, char** argv)
 	{
-		arg a(argc, argv);
+		try
+		{
+			arg a(argc, argv);
+			//
+			auto p = this->make_prc(a);
+			//
+			(*p)(a);
+		}
+		catch (const std::exception& e)
+		{
+			std::cerr << "ERROR: " << e.what() << std::endl;
+			//
+			return -1;
+		}
 		//
-		
-		//rba r;
-		////
-		//r.parse("REDO RECORD - Thread:1 RBA: 0x0001ea.00012dda.0044 LEN: 0x081c VLD: 0x01 CON_UID: 134706866");
-		////
-		//processor_dump p;
-		////
-		//p("testlog", r, 512);
-		////
 		return 0;
 	}
 }

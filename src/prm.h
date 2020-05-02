@@ -1,6 +1,6 @@
 #pragma once
 //
-#include <string>
+#include <string_view>
 //
 namespace cut
 {
@@ -8,6 +8,6 @@ namespace cut
 	{
 	public:
 		virtual bool ddo() const = 0;
-		virtual const std::string& fnm() const = 0;
+		virtual const std::string_view fnm() const = 0;
 	};
 }

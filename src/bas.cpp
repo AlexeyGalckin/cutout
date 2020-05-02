@@ -17,7 +17,7 @@ namespace cut
 		return _d;
 	}
 	//
-	const std::string& bas::fnm() const
+	const const std::string_view bas::fnm() const
 	{
 		return _f;
 	}
