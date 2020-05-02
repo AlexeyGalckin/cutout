@@ -58,11 +58,11 @@ namespace cut
 	{
 		std::ostringstream ss;
 		//
-		ss << std::hex;
+		ss << std::hex << std::setfill('0');
 		ss << "0x";
-		ss << std::setw(sizeof(_sno) << 1) << _sno << ".";
-		ss << std::setw(sizeof(_bno) << 1) << _bno << ".";
-		ss << std::setw(sizeof(_off) << 1) << _off;
+		ss << std::setw(6) << _sno << ".";
+		ss << std::setw(8) << _bno << ".";
+		ss << std::setw(4) << _off;
 		//
 		return ss.str();
 	}

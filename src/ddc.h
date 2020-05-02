@@ -17,7 +17,9 @@ namespace cut
 		//
 		virtual void operator()(const opt& o) override;
 	protected:
-		static void osout(std::ostream& os, const std::string_view d, const rba& r);
+		static size_t ddlen(size_t off, size_t len);
+		//
+		static void osout(std::ostream& os, const std::string_view d, const rba& r, size_t bs);
 		//
 		std::string _s;
 		size_t      _b;

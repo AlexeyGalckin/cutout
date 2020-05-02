@@ -3,7 +3,9 @@
 #include <vector>
 //
 #include <cstddef>
+//
 #include <ostream>
+#include <istream>
 //
 namespace cut
 {
@@ -12,6 +14,7 @@ namespace cut
 	public:
 		using byte_type = std::byte;
 		using data_type = char*;
+		using const_data_type = const char*;
 		//
 		buf() = default;
 		buf(size_t s);
@@ -19,6 +22,7 @@ namespace cut
 		void resize(size_t s);
 		//
 		data_type data();
+		const_data_type data() const;
 		//
 		void rewind();
 		void seek(size_t s);
@@ -40,6 +44,6 @@ namespace cut
 		index_type   _i = {};
 	};
 	//
-	//std::ostream& operator<<(std::ostream& os, const buf& b);
-	//std::ostream& operator<<(std::ostream& os, buf& b);
+	std::istream& operator>>(std::istream& is, buf& b);
+	std::ostream& operator<<(std::ostream& os, const buf& b);
 }

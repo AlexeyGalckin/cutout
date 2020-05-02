@@ -22,6 +22,11 @@ namespace cut
 		return reinterpret_cast<data_type>(_d.data());
 	}
 	//
+	buf::const_data_type buf::data() const
+	{
+		return reinterpret_cast<const_data_type>(_d.data());
+	}
+	//
 	bool buf::full() const
 	{
 		return this->space() == 0;
@@ -66,11 +71,40 @@ namespace cut
 		//
 		std::copy(st, en, ds);
 		//
+		this->advance(s);
+		b.advance(s);
+		//
 		return *this;
 	}
 	//
 	buf::storage_type& buf::storage()
 	{
 		return _d;
+	}
+
+	std::istream& operator>>(std::istream& is, buf& b)
+	{
+		const auto s = b.space();
+		//
+		is.read(b.data(), s);
+		//
+		const auto n = is.gcount();
+		//
+		b.advance(n);
+		//
+		if (n != s)
+			throw std::runtime_error("Currupted block (too small)!");
+		//
+		return is;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const buf& b)
+	{
+		os.write(b.data(), b.index());
+		//
+		if(!os)
+			throw std::runtime_error("Could not write data block!");
+		//
+		return os;
 	}
 }

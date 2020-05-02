@@ -49,7 +49,7 @@ namespace cut
 		this->dump(rec, sr);
 	}
 	//
-	void out::dump(const buf& b, const std::string_view f)
+	void out::dump(buf& b, const std::string_view f)
 	{
 		std::ofstream os;
 		//
@@ -57,6 +57,6 @@ namespace cut
 		//
 		os.open(f.data(), std::ios::out | std::ios::binary);
 		//
-		//os << b;
+		os << b;
 	}
 }

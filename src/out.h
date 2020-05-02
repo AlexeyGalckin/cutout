@@ -18,7 +18,7 @@ namespace cut
 		virtual void operator()(const opt& o) override;
 		//
 	protected:
-		void dump(const buf& b, const std::string_view f);
+		void dump(buf& b, const std::string_view f);
 		//
 		std::unique_ptr<src> _s;
 	};

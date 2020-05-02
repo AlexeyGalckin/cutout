@@ -23,14 +23,7 @@ namespace cut
 	{
 		b.resize(_b);
 		//
-		_s.read(b.data(), b.space());
-		//
-		const auto n = _s.gcount();
-		//
-		b.advance(n);
-		//
-		if (n != _b)
-			throw std::runtime_error("Currupted block (too small)!");
+		_s >> b;
 		//
 		return *this;
 	}
