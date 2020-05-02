@@ -19,10 +19,14 @@ namespace cut
 			//
 			(*p)(a);
 		}
+		catch (const cut::aex& e)
+		{
+			std::cerr << "USAGE: " << e.usage() << std::endl;
+			return 1;
+		}
 		catch (const std::exception& e)
 		{
 			std::cerr << "ERROR: " << e.what() << std::endl;
-			//
 			return -1;
 		}
 		//

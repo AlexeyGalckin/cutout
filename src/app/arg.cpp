@@ -1,5 +1,7 @@
 #include "arg.h"
 //
+#include <cxxopts.hpp>
+//
 namespace cut
 {
 	arg::arg(int argc, char** argv)
@@ -9,12 +11,22 @@ namespace cut
 	//
 	void arg::init(int argc, char** argv)
 	{
-		_r.parse("REDO RECORD - Thread:1 RBA: 0x03c2fb.000d9c72.005c LEN: 0x01c4 VLD: 0x01 CON_UID: 0");
+		cxxopts::Options op(argv[0], "Oracle record cutter utility");
 		//
-		_b = 512;
+		op.add_options()
+			("d,dd", "Output dd utility command line only", cxxopts::value<bool>()->implicit_value("false"))
+			("b,block", "Redo Log Block Size", cxxopts::value<int>()->default_value("512"))
+			("h,header", "A header text copied from a trace file", cxxopts::value<std::string>());
 		//
-		_d = true;
+		auto rc = op.parse(argc, argv);
 		//
-		_f = "C:\\Work\\bugs\\IDR-2422\\RedoLog\\rxprod11_1_246523_789088832.arch";
+		_d = rc["dd"].as<bool>();
+		_b = rc["block"].as<size_t>();
+		_r.parse(rc["header"].as<std::string>());
+	}
+	//
+	std::string aex::usage() const
+	{
+		return std::string();
 	}
 }

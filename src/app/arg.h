@@ -12,4 +12,10 @@ namespace cut
 		//
 		void init(int argc, char** argv);
 	};
+	//
+	class aex
+	{
+	public:
+		std::string usage() const;
+	};
 }

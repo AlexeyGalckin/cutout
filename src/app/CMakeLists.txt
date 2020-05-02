@@ -3,6 +3,8 @@ file( GLOB HDR *.h )
 #
 add_executable( cutout ${SRC} ${HDR} )
 #
-target_include_directories( cutout PRIVATE ${CUT_EXT_DIR} )
+set( CXXOPTS_INC ${CUT_EXT_DIR}/cxxopts/include )
+#
+target_include_directories( cutout PRIVATE ${CXXOPTS_INC} )
 target_link_libraries( cutout PRIVATE cut )
 #
