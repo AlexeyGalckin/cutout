@@ -1,15 +1,13 @@
 #pragma once
 //
-#include <string_view>
-//
-#include "rba.h"
-//
 namespace dump
 {
+	class options;
+	//
 	class processor
 	{
 	public:
-		virtual void operator()(const std::string_view f, rba r, size_t bs) = 0;
+		virtual void operator()(const options& opt) = 0;
 		virtual ~processor() = default;
 	};
 }

@@ -4,7 +4,7 @@
 //
 namespace dump
 {
-	class rbak
+	class rba
 	{
 	public:
 		rba() = default;

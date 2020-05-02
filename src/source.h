@@ -2,8 +2,9 @@
 //
 namespace dump
 {
-	class options
+	class source
 	{
 	public:
+		virtual ~source() = default;
 	};
 }
