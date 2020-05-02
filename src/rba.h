@@ -4,11 +4,11 @@
 //
 namespace dump
 {
-	class rbal
+	class rbak
 	{
 	public:
-		rbal() = default;
-		rbal(const std::string& s);
+		rba() = default;
+		rba(const std::string& s);
 		//
 		void parse(const std::string& s);
 		//

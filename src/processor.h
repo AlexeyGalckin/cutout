@@ -9,7 +9,7 @@ namespace dump
 	class processor
 	{
 	public:
-		virtual void operator()(const std::string_view f, rbal r, size_t bs) = 0;
+		virtual void operator()(const std::string_view f, rba r, size_t bs) = 0;
 		virtual ~processor() = default;
 	};
 }

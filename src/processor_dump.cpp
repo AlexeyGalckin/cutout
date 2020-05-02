@@ -6,7 +6,7 @@
 //
 namespace dump
 {
-	void processor_dump::operator()(const std::string_view f, rbal r, size_t s)
+	void processor_dump::operator()(const std::string_view f, rba r, size_t s)
 	{
 		std::ifstream is;
 		//
