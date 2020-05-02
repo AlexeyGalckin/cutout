@@ -5,6 +5,6 @@ namespace cut
 	class src
 	{
 	public:
-		virtual ~source() = default;
+		virtual ~src() = default;
 	};
 }
