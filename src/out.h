@@ -7,6 +7,7 @@
 namespace cut
 {
 	class src;
+	class buf;
 	//
 	class out : public prc
 	{
@@ -16,6 +17,8 @@ namespace cut
 		virtual void operator()(const opt& o) override;
 		//
 	protected:
+		void dump(const buf& b);
+		//
 		std::unique_ptr<src> _s;
 	};
 }

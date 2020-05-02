@@ -6,7 +6,7 @@
 //
 namespace cut
 {
-	fss::fss(const std::string_view s)
+	fss::fss(const std::string_view s, size_t b)
 	{
 		//std::ifstream is;
 ////
@@ -18,5 +18,16 @@ namespace cut
 //{
 
 //}
+	}
+	void fss::seek(size_t b)
+	{
+	}
+	src& fss::operator>>(buf& b)
+	{
+		return *this;
+	}
+	fss::operator bool() const
+	{
+		return false;
 	}
 }
